@@ -19,7 +19,7 @@ local DEFAULT_CONFIG = {
    lualine_bg_color = nil,
    colors = require("dracula.palette"),
    overrides = {},
-   theme = 'dracula'
+   theme = "dracula",
 }
 
 local TRANSPARENTS = {
@@ -28,7 +28,7 @@ local TRANSPARENTS = {
    "NvimTreeNormal",
    "NvimTreeVertSplit",
    "NeoTreeNormal",
-   "NeoTreeNormalNC"
+   "NeoTreeNormalNC",
 }
 
 local function apply_term_colors(colors)
@@ -97,12 +97,15 @@ local user_configs = {}
 local function get_configs()
    local configs = DEFAULT_CONFIG
 
-   if g.colors_name == 'dracula-soft' then
-      configs.theme = 'dracula-soft'
-      configs.colors = require('dracula.palette-soft')
-   elseif g.colors_name == 'dracula' then
-      configs.theme = 'dracula'
-      configs.colors = require('dracula.palette')
+   if g.colors_name == "dracula-soft" then
+      configs.theme = "dracula-soft"
+      configs.colors = require("dracula.palette-soft")
+   elseif g.colors_name == "dracula-blade" then
+      configs.theme = "dracula-blade"
+      configs.colors = require("dracula.palette-blade")
+   elseif g.colors_name == "dracula" then
+      configs.theme = "dracula"
+      configs.colors = require("dracula.palette")
    end
 
    configs = tbl_deep_extend("force", configs, user_configs)
@@ -137,7 +140,7 @@ local function load(theme)
 
    o.background = "dark"
    o.termguicolors = true
-   g.colors_name = theme or 'dracula'
+   g.colors_name = theme or "dracula"
 
    apply(get_configs())
 end
@@ -146,5 +149,7 @@ return {
    load = load,
    setup = setup,
    configs = get_configs,
-   colors = function() return get_configs().colors end,
+   colors = function()
+      return get_configs().colors
+   end,
 }
