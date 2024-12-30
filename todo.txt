@@ -1,4 +1,8 @@
-Cursor.
+Tabs
+- Fix the tab bar background color to be the same as visual studio code when multiple tabs are open.
+  currently it appears to be the same as the status line.
+
+Cursor
 - Use bg light for the cursor line from the vim theme and bglighter for the selected cursor line as it looks better and like VSCode.
 - Use a light color for the cursor in insert mode.
 
