@@ -4,6 +4,7 @@ Cursor.
 
 Noice
 - Fix the noice pop up menu to look nice.
+- Fix the noice notifications from LSP in bottom right as they are hard to read.
 
 VSCode
 - Try and get them highlight groups matching VSCode as much as possible.
