@@ -12,3 +12,5 @@ Noice
 
 VSCode
 - Try and get them highlight groups matching VSCode as much as possible.
+- VSCode changes the background color of words that match the current word under the cursor, whereas nvim changes to foreground color
+  which is not as nice. Try and get this to match VSCode.
