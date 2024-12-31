@@ -4,7 +4,6 @@ Tabs
 
 Cursor
 - Use bg light for the cursor line from the vim theme and bglighter for the selected cursor line as it looks better and like VSCode.
-- Use a light color for the cursor in insert mode.
 
 Noice
 - Fix the noice pop up menu to look nice.
